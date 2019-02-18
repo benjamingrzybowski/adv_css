@@ -1,0 +1,19 @@
+*, 
+*::after, 
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* browsers typically have a set font size of 16px, 62.5% of 16px is 10px 
+    using a percentage allows the page to adpadt based on what the user has set 
+*/
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box; 
+}

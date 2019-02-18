@@ -1,0 +1,59 @@
+***BASIC COMMANDS
+
+cp enter_file enter_destination - copy a file or folder to a new location 
+mv enter_file enter_destination - move a file or folder to a new location 
+rm -r enter_file                - delete a folder 
+rm enter_file                   - delete a file
+cd enter_destinaton             - move around 
+ls                              - shows contents of current folder 
+touch enter_new_file            - create a new file 
+mkdir enter_new_folder          - create a new folder 
+
+
+***NODE JS 
+
+1. install node js from nodejs.org 
+2. node -v in terminal to test version 
+
+3. navigate to folder in terminal 
+4. run npm init
+
+** INSTALL SASS 
+Navigate to project folder that needs sass complier
+
+1. npm install node-sass --save-dev 
+    * -dev will make dependcies calld dev-dependecies, which are different than other dependcies
+    * such as jquery below 
+
+ npm install jquery --save (for demnostration)
+
+*** when sending projects omit node_modules folder 
+*** when receiving a project use npm install, termninal will automatically install all
+*** dependecies listed in package.json file, which is sent with the project 
+
+****** cmd+t while in terminal to open new terminal windows 
+
+** COMPILE SCSS 
+
+Need to create an npm script
+
+1. open package.json 
+2. create a new script under "scripts" 
+3. "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    * node-sasa requires the path to the input file (main.scss) 
+    * and a path to the output file (style.css)
+    * -w means to watch so it will automatically watch for changes in file on save
+    * and then it will automatically update the css file
+4. open terminal and use npm run compile:sass
+5. must leave the ternminal window running and open new one for future commands 
+
+** AUTO RELOAD PAGE 
+
+** SUDO - used to override permissions issues when installing packages 
+
+1. sudo npm install live-server -g
+    * -g install this package globally so that it will work with any project 
+2. navigate to main project folder in terminal and use live-server to open page 
+    * page will automatically update when any changes are made
+    * make sure xampp is closed
+3. must leave the ternminal window running and open new one for future commands 

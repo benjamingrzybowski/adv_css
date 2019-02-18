@@ -1,0 +1,82 @@
+
+3 PILLARS OF GOOD DESIGN 
+
+* responsive - scales based on screen size
+
+* maintainable and scalable code - clean, easy to use, easy to grow, resuable, organized
+
+* preformance - less http requests, less code, compress code, use a preprocessor, less images, compress images
+
+-----
+
+* css is stored in a CSSOM - css object model, similar to DOM
+
+* user agent style - style that is applied by the browser, such as blue & underlined links
+
+* rem and em are both for fonts and length 
+
+* length depends on font size and em can be used to declare 
+
+* em is calculated based on the font size of the parent element
+
+* rem is caluclated based on the root font size 
+
+* vh - viewport height 
+
+* vw - viewport width 
+
+* box-sizing: border-box - removes margin and border from being caluclated in the width and height
+of an object 
+
+BOX TYPES 
+
+* block - formatted as blocks, takes up as much space as possible 100% of parent width, 
+displayed vertically, 
+
+* inline - content is distributed in lines, space taken up is determined by content, no line breaks
+no height or width, padding and margin only 
+
+* inline-block - mix of both, takes up only contents space, no line breaks, uses box model
+
+POSITIONING
+
+* normal-flow - defualt behavior, not floated or absolutely positioned 
+
+* floats - element removed from normal flow, text and inline elements wrap around floated element 
+container will not adjust it's height to the element. 
+
+* absolute - element removed from normal flow, no impact on surrounding content, uses top, 
+bottom, left, and right 
+
+STACKING CONTEXT 
+
+* similar to layers that form a stack 
+
+THINK - BUILD - ARCHITECT 
+
+THINK 
+
+    * use modular blocks to make up interfaces
+    * should be re-usable across project and different projects
+    * should be independent allowing to use on any page 
+
+BUILD 
+
+    * BEM - Block Element Modifier 
+    * block is a standalone component that is meaningful on it's own -> .block{}
+    * element part of a block that has no standalone meaning -> .block__element{}
+    * Modifier a different version of a block or element -> .block_element--modifier{}
+
+ARCHITECT 
+
+    *logical file and folder structure 
+    * 7-1 pattern, 7 different folder for partial SASS files, 1 main sass file to import all others
+    * THE 7 FOLDERS 
+        - base/ - basic project definitions
+        - components/ - one file for each component 
+        - layout/ - define overall layout of project
+        - pages/ - specific styles for pages
+        - themes/ - if different visual themes
+        - abstracts/ - code that doesn't output anything, mixins, variables
+        - vendors/ - third party code 
+    * not necessary to use all folders, depends on size and scope of project 

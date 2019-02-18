@@ -1,0 +1,51 @@
+////// GRIDS 
+
+cd desktop/adv_css/advanced-css-course/Natours/starter
+
+
+* :not(:last-child) suedo selector - selects everything except the parameter it's given
+    * this case it is everything except the last element
+
+* calc() - css function that allows you to do math, can mix data types (px, rem, % etc)
+
+#clearfix - appends a psuedo element after the parent element to clear floats
+    * content must be specified or it will not be displayed
+    * display should be set to table 
+    * clear property is the piece that clears the float. 
+
+* call mixins with @include name-of-mixin
+
+* attribute selector [] - allows you to select elements based on a certain attribute 
+    * can select based on certain words in a class or id as well 
+    * ^ means to select everything that begins with whatever is specified 
+    * [class^="col-"] -- means to select all classes that begins with col-
+    * [class*="col-"] -- means to select everything that contains col-
+    * [class$="col-"] -- means to select everything that ends with col-
+
+
+* HOW TO CREATE LIVE TEXT WITH GRADIENT 
+    * set gradient 
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    * clip background so it only is where text is
+    background-clip: text;
+    -webkit-background-clip: text;
+    * make text color transparent so the gradient shines through
+    color: transparent;
+
+
+* UTILITIE CLASSES
+
+    * simple css classes that only have one goal 
+
+* SASS SELECTOR & < * - means to select all direct childern of an element 
+
+* the lower the number in perspective the more dramatic the effect
+
+
+* blend an image and a gradient 
+
+background-blend-mode: screen;
+
+background-image: 
+            linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+            url(../img/nat-5.jpg);
