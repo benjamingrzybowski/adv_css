@@ -80,3 +80,15 @@ ARCHITECT
         - abstracts/ - code that doesn't output anything, mixins, variables
         - vendors/ - third party code 
     * not necessary to use all folders, depends on size and scope of project 
+
+
+INPUTS 
+    * inputs do not auto inherit font-family, must be manually set 
+    * can use google authentication to style valid and not valid input
+
+SIBLING SELECTORS 
+    * + symbol is the syntax for the adjacent sibling selector 
+    * ~ symbol is the syntax for sibiling selector
+
+TRANSITION 
+    * smoothes out 

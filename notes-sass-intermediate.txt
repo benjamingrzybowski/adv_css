@@ -49,3 +49,18 @@ background-blend-mode: screen;
 background-image: 
             linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
             url(../img/nat-5.jpg);
+
+* shape-outside: circle(50% at 50% 50%) <- can be used to make text wrap around in a circular way, must have defined width and height
+
+* best way to move floated elements is to use transform instead of margins or float
+
+
+CRAZY NAV
+
+CHECKBOX HACK
+
+
+
+CUBIC BEZIER 
+
+TRANSFORM ORIGIN 
