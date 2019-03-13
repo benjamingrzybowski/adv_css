@@ -31,6 +31,11 @@
     &__left {
         width: 33.333333%;
         display: table-cell;
+
+        @include respond(tab-port) {
+            width: 100%;
+            display: inline-block;
+        }
     }
 
     &__right {
@@ -38,11 +43,23 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include respond(tab-port) {
+            padding: 2rem 3rem;
+            width: 100%;
+            display: inline-block;
+        }
     }
 
     &__img {
         display: block;
         width: 100%;
+
+        @include respond(tab-port) {
+            display: inline-block;
+            float: left;
+            width: 50%;
+        }
     }
 
     &__text {

@@ -54,13 +54,40 @@ background-image:
 
 * best way to move floated elements is to use transform instead of margins or float
 
+RESPONSIVE IMAGES
 
-CRAZY NAV
+RESOLUTION SWITCHING 
 
-CHECKBOX HACK
+* browser knows it's view port width and it knows the PX density of the screen
+* uses two images with different widths and tells browser their widths with html in the srcset attr, before it loads them
+* uses normal src as a fallback if browser can't do this
+* uses sizes element to tell browser how wide the images are certain view port widths
+* browser can decide which image to load based on it's px density and VP width
+
+                            <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w" 
+                                 src="img/nat-1-large.jpg"
+                                 size="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                                 alt="1"    
+                                 class="comp__photo comp__photo--p1">
 
 
 
-CUBIC BEZIER 
+DENSITY SWITCHING
 
-TRANSFORM ORIGIN 
+* serving an image based on the pixel density of a screen
+* uses 1x and 2x to determine what screen resolution is being used
+* done in html, easiest 
+
+                    <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="blahbalj">
+
+
+ART DIRECTION
+
+* serving a completly different image for different screen sizes 
+* uses picture element which allows multiple sources for a element, can write media query in sources
+* uses whatever image is set by media query, then uses a <img> for when media query does not apply
+
+                    <picture class="footer__logo">
+                        <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+                        <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="blahbalj" >
+                    </picture>
